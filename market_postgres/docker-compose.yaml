@@ -13,6 +13,14 @@ services:
     ports:
       - "5432:5432"
 
+  backend:
+    build: ../.
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - db
+
   frontend:
     build: ../frontend_react/.
     volumes:
@@ -23,7 +31,6 @@ services:
   nginx:
     image: nginx:1.19.1
     ports:
-      - "8000:8000"
       - "3000:3000"
     volumes:
       - ../skymarket/django_static/:/usr/share/nginx/html/django_static/

@@ -10,3 +10,4 @@ RUN poetry install -n --no-ansi
 COPY .env /app/skymarket/
 COPY ./skymarket/ ./
 
+CMD python manage.py runserver 0.0.0.0:8000

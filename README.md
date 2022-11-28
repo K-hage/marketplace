@@ -6,7 +6,7 @@
 - docker
 
 
-### 1. Как запустить frontend-часть проекта:
+### 1. Как запустить проект:
 
 ---
 
@@ -18,52 +18,13 @@
 
 `docker-compose up --build -d`
 
-Фронтенд-часть проекта будет доступна по адресу
+Frontend-часть проекта будет доступна по адресу
 
 [http://localhost:3000](http://localhost:3000)
 
-Вместе с frontend создастся и postgres для backend
+Backend-часть проекта будет доступна по адресу
 
----
-
-### 2. Как запустить backend-часть:
-
----
-
-Создаем виртуальное окружение
-
----
-### Первый способ установки зависимостей(через poetry):
-
-Устанавливаем poetry
-
-`pip install poetry`
-
-Устанавливаем зависимости
-
-`poetry install`
-
----
-### Второй способ установки зависимостей(через pip):
-
-Устанавливаем зависимости из requirements.txt
-
-`pip instal -r requirements.txt`
-
----
-Затем сделать миграции в базу данных
-
-`python skymarket/manage.py migrate`
-
-Загрузить данные в базу данных
-
-`python skymarket/manage.py loadall`
-
-Cоздать файл .env на основе .env.example
-
-И запустить проект
-
-`python skymarket/manage.py runserver`
+[http://localhost:8000](http://localhost:8000)
 
 
 Бэкенд-часть проекта реализует следующий функционал:
