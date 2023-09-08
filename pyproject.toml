@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "coursework-6-skymarket"
+name = "marketplace"
 version = "0.1.0"
 description = ""
 authors = ["KHAGE"]

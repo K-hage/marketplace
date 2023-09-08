@@ -1,31 +1,42 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Курсовая+работа+№6)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Торговая площадка)](https://git.io/typing-svg)
 
 ### Требования:
 
 - python 3.10
 - docker
 
-
 ### 1. Как запустить проект:
 
 ---
 
-Переходим в папку market-postgres.
+Переходим в папку market_postgres.
 
-`cd market-postgres`
+``` shell
+cd market_postgres
+```
 
 Выполняем команду
 
-`docker-compose up --build -d`
+``` shell
+docker-compose up --build -d
+```
 
 Frontend-часть проекта будет доступна по адресу
 
 [http://localhost:3000](http://localhost:3000)
 
-Backend-часть проекта будет доступна по адресу
+Backend-часть проекта будет доступна по ссылке:
 
-[http://localhost:8000](http://localhost:8000)
+[Swagger](http://localhost:8000/api/schema/swagger-ui/)
+___
 
+### 2. Как остановить и очистить проект:
+
+В папке market_postgres в терминале прописать:
+
+``` shell
+docker-compose down
+```
 
 Бэкенд-часть проекта реализует следующий функционал:
 ---

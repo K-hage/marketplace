@@ -115,7 +115,7 @@ DJOSER = {
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get('DB_ENGINE', "django.db.backends.postgresql_psycopg2"),
+        "ENGINE": os.environ.get('DB_ENGINE', "django.db.backends.postgresql"),
         "HOST": os.environ.get("DB_HOST", "localhost"),
         "NAME": os.environ.get("POSTGRES_NAME", "skymarket"),
         "PORT": os.environ.get("DB_PORT", "5432"),
@@ -125,7 +125,7 @@ DATABASES = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=20),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 

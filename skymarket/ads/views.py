@@ -26,9 +26,9 @@ class AdViewSet(ModelViewSet):
         'destroy': AdDetailSerializer,
     }
 
-    default_permission = (AllowAny(), )
+    default_permission = (AllowAny(),)
     permissions = {
-        'retrieve': (IsAuthenticated(), ),
+        'retrieve': (IsAuthenticated(),),
         'create': (IsAuthenticated(), IsUser() or IsAdmin()),
         'destroy': (IsAuthenticated(), IsUser() or IsAdmin()),
         'update': (IsAuthenticated(), IsUser() or IsAdmin()),
@@ -64,7 +64,7 @@ class CommentViewSet(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
-    default_permission = (IsAuthenticated(), )
+    default_permission = (IsAuthenticated(),)
     permissions = {
         'create': (IsUser() or IsAdmin(),),
         'destroy': (IsUser() or IsAdmin(),),
